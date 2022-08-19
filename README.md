@@ -1,6 +1,10 @@
 # Programação funcional em Scala
 
-## Funções de alta ordem em scala
+### Motivação: 
+Testar paradigmas estudados em Haskell presentes em uma linguagem diferente, aprendendo conceitos, 
+testando exemplos, criando pequenos códigos e fazendo contrapontos entre as semelhanças.
+
+## Funções de alta ordem em Scala
 
 ### Filter:
 
@@ -136,7 +140,44 @@ object GfG
 
 Nossa saída vai ser: "Reversed Stack(1, 2, 3, 4, 5)"
 
+### Função DropWhile:
 
+O método dropWhile() é utilizado para eliminar o prefixo de elementos mais longo do conjunto que satisfaça a condição declarada.
+
+Obs: Eu fiquei confuso nessa função aqui e apesar de ser simples, demorei bastante para entender o funcionamento dela.
+
+#### Implementação:
+
+```
+
+object GfG 
+{ 
+    // Main method 
+    def main(args:Array[String]) 
+    { 
+      
+        // Creating a list 
+        var s1 = Set(1, 3, 5, 4, 2) 
+          
+        // Print the set
+        println(s1)
+          
+        // Applying dropWhile method 
+        var res = s1.dropWhile(x => {x % 2 != 0}) 
+          // peguei esse código pronto e pelo que eu entendi, ele remove o primeiro e último elemento 
+          //que satisfaçam a condição expressa, foi oque consegui compreender executando e modificando o código algumas vezes.
+          // a ordem de impressão ainda me deixou um pouco confuso.
+          
+        // Displays output 
+        println(res)  
+    } 
+}
+```
+
+### Referências:
+https://acervolima.com/metodo-scala-set-dropwhile-com-exemplo/
+https://www.geeksforgeeks.org/scala-list-filter-method-with-example/
+https://www.geeksforgeeks.org/scala-map-method/
 
 
 
